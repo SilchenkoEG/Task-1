@@ -1,0 +1,45 @@
+[
+    {"name" : "phones",
+        "children": 
+        [
+      {
+          "title": "Iphone",
+          "price": 1700,
+          "color": "black"
+      },
+      {
+          "title": "Samsung",
+          "price": 1000,
+          "color": "black"
+      },
+      {
+          "title": "LG",
+          "price": 300,
+          "color": "white"
+      }
+        ]
+    },
+        {"name" : "laptops",
+        "children":[
+            
+          {
+               "title" : "Samsung",
+               "price": 5000,
+               "color": "white"
+          },
+          {
+                "title" : "Lenovo",
+                "price": 3000,
+                "color": "white"
+          },
+          {
+            "title" : "Mac",
+            "price": 9000,
+            "color": "black"
+       }  
+            
+        ]
+
+    }
+]
+  
