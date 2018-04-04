@@ -10,13 +10,6 @@ class Category extends Component {
       filterName:'',
     }    
   }
-  // showCategory = (name) => {
-  //   data.map(element => {
-  //     if(element.name === name){
-  //       this.setState({ correctCategory :
-  //       element.children,filterCategory: element.children })
-  //     }})
-  // }
   showCategory = (name) => {
     this.setState({ filterNameCategory : name});
   }
