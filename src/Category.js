@@ -35,27 +35,24 @@ class Category extends Component {
       this.setState({filterColor : joined})
     }
   }
-    render() {
-      return (
-        <div className="App">
-          <div className='filterColor'>
-            <p><input type='checkbox' value='black' checked={this.state.filterColor.includes('black')} onChange={this.changeCheck} />Black</p>
-            <p><input type='checkbox' value='white' checked={this.state.filterColor.includes('white')} onChange={this.changeCheck} />White </p>   
-          </div>  
-          <input 
-            type ='text' value = {this.state.filterName} onChange = {this.changeSearch}/>
-          <ul>
-          {data.map((category)=>{
-            return <li key={category.name} onClick={ () => this.showCategory(category.name)}>{category.name}</li>
-          })}
+  render() {
+    return (
+      <div className="App">
+        <div className='filterColor'>
+          <p><input type='checkbox' value='black' checked={this.state.filterColor.includes('black')} onChange={this.changeCheck} />Black</p>
+          <p><input type='checkbox' value='white' checked={this.state.filterColor.includes('white')} onChange={this.changeCheck} />White </p>   
+        </div>  
+        <input type ='text' value = {this.state.filterName} onChange = {this.changeSearch}/>
+        <ul>
+          {data.map((category)=>{ return <li key={category.name} onClick={ () => this.showCategory(category.name)}>{category.name}</li> })}
         </ul>
         { data.map(item => item.children).reduce((a,b) => a.concat(b))
           .filter((product)=> this.state.filterColor.includes(product.color))
           .filter( item => item.title.indexOf(this.state.filterName) !== -1)
           .map((item,index) =>  <p key={index} >{item.title} {item.price} {item.color}</p> )}
          </div> 
-      );
-    }
+    );
   }
+}
   
   export default Category;
