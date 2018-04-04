@@ -39,10 +39,10 @@ class Category extends Component {
         <ul>
           {data.map((category)=>{ return <li key={category.name} onClick={ () => this.showCategory(category.name)}>{category.name}</li> })}
         </ul>
-        { this.state.filterNameCategory !== '' && data.filter(item => item.name === this.state.filterNameCategory).map(item => item.children).reduce((a,b) => a.concat(b))
+        { this.state.filterNameCategory && data.filter(item => item.name === this.state.filterNameCategory).map(item => item.children).reduce((a,b) => a.concat(b))
           .filter((product)=> this.state.filterColor.includes(product.color))
           .filter( item => item.title.indexOf(this.state.filterName) !== -1)
-          .map((item,index) =>  <p key={index} >{item.title} {item.price} {item.color}</p> )}
+           .map((item,index) =>  <p key={index} >{item.title} {item.price} {item.color}</p> )}
          </div> 
     );
   }
