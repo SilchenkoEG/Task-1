@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import data from "./data.json";
-import ProductList from "./ProductList";
-import Bootstrap from "bootstrap/dist/css/bootstrap.css";
 import {ListGroup,ListGroupItem } from "react-bootstrap";
 
 class Categories extends Component {

@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import Categories from "./Category";
-import Bootstrap from "bootstrap/dist/css/bootstrap.css";
 import {
   Form,
   FormGroup,
-  FormControl,
   ListGroup,
   ListGroupItem,
-  Grid,
   Col,
   Row
 } from "react-bootstrap";
@@ -57,7 +54,7 @@ class App extends Component {
                     value={this.state.searchPhrase}
                   />
                 </FormGroup>{" "}
-                <FormGroup  className='searcGroup' controlId="formInlineEmail">
+                <FormGroup className="searcGroup" controlId="formInlineEmail">
                   <Filters
                     onChangeCheck={this.changeCheck}
                     filterColor={this.state.filterColor}

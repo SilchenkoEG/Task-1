@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Bootstrap, FormGroup, Checkbox } from "react-bootstrap";
+import React from "react";
+import {  FormGroup, Checkbox } from "react-bootstrap";
 
 export default props => (
   <FormGroup>
